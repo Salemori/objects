@@ -10,8 +10,8 @@ function InstagramPost(authorHandle, content, imageLink, numberOfViews, numberOf
 // Answer to question 2.
 const igPostOne = new InstagramPost("@bolatito007", "My set-back is a set-up for my get-up", "https://www.instagram.com/p/Co7X6YPoHQH/", "7000", "10000");
 const igPostTwo = new InstagramPost("@temilade4real", "A new day of bliss. Found my peace.", "https://www.instagram.com/p/Po9X8YPoHQ/", "2000", "6000");
-console.log(igPostOne);
-console.log(igPostTwo);
+console.log({igPostOne});
+console.log({igPostTwo});
 
 // Answer to question 3A.
 function createPerson(name, age, location){
@@ -22,7 +22,7 @@ function createPerson(name, age, location){
     }
 }
 const personMusa = createPerson('Musa', '19', 'Lekki, Lagos State');
-console.log(personMusa);
+console.log({personMusa});
 
 // Answer to question 3B.
 function createJambScores(eng, govt, lit, crk){
@@ -35,7 +35,7 @@ function createJambScores(eng, govt, lit, crk){
 }
 
 const musaJambScore = createJambScores(89, 97, 70, 90);
-console.log(musaJambScore);
+console.log({musaJambScore});
 
 personMusa.jambScores = musaJambScore;
 console.log({personMusa});
@@ -73,7 +73,7 @@ const cloneHouseFour = Object.assign({}, house);
 console.log({cloneHouseFour});
 
 //IV. Cloning object Using the spread operator.
-const houseFive = {...cloneHouseThree};
+const houseFive = {...house};
 console.log({houseFive});
 
 //V. Cloning object Using the 'For in' loop.
@@ -83,4 +83,17 @@ for (let index in house){
 }
 console.log({houseSix})
 
+// Answer to question 5.
+const presidentialCandidates = {
+    AAC: 'Omoyele Sowore',
+    ACCORD: 'Christopher Imumolen',
+    APC: 'Bola Ahmed Tinubu',
+    LP: 'Peter Obi',
+    NNPP: 'Rabiu Kwankwaso',
+    PDP: 'Atiku Abubakar',
+}
 
+//’Omoyele Sowore is the presidential candidate of AAC’
+for(party in presidentialCandidates){
+    console.log(`${presidentialCandidates[party]} is the presidential candidate of ${party}`);
+}
